@@ -23,10 +23,63 @@
     "heroku-postbuild": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "eslint": "eslint src server --fix",
+    "lint": "yarn eslint",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "global-require": "off",
+      "no-console": [
+        "warn",
+        {
+          "allow": [
+            "warn",
+            "error",
+            "info"
+          ]
+        }
+      ],
+      "no-continue": "off",
+      "no-underscore-dangle": "off",
+      "import/no-dynamic-require": "off",
+      "import/prefer-default-export": "off",
+      "generator-star-spacing": "off",
+      "import/no-extraneous-dependencies": "off",
+      "react/no-unused-prop-types": "off",
+      "max-len": [
+        "warn",
+        {
+          "code": 150,
+          "ignoreComments": true,
+          "ignoreStrings": true,
+          "ignoreTrailingComments": true,
+          "ignoreTemplateLiterals": true
+        }
+      ],
+      "no-param-reassign": [
+        "warn",
+        {
+          "props": false
+        }
+      ],
+      "no-restricted-globals": "off",
+      "camelcase": "off",
+      "no-throw-literal": "off",
+      "no-plusplus": "off",
+      "import/extensions": "off",
+      "react/jsx-filename-extension": "off",
+      "react/forbid-prop-types": "off",
+      "react/no-danger": "off",
+      "no-useless-escape": "off",
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowTaggedTemplates": true
+        }
+      ]
+    }
   },
   "browserslist": [
     ">0.2%",

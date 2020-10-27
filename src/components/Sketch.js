@@ -1,7 +1,5 @@
 export default function sketch (p) {
-  
   let socket;
-
   p.setup = function () {
     p.createCanvas(670, 600);
     p.background(250);
@@ -27,10 +25,10 @@ export default function sketch (p) {
     p.line(p.mouseX, p.mouseY, p.pmouseX, p.pmouseY);
 
     socket.emit('DRAWING', {
-        mouseX: p.mouseX,
-        mouseY: p.mouseY,
-        pmouseX: p.pmouseX,
-        pmouseY: p.pmouseY
+      mouseX  : p.mouseX,
+      mouseY: p.mouseY,
+      pmouseX: p.pmouseX,
+      pmouseY: p.pmouseY
     });
 
   };

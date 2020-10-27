@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 
 var PORT = process.env.PORT || 8000;
 var server = app.listen(PORT, function(){
-    console.log('server is running on port ' + PORT);
+  console.info('server is running on port ' + PORT);
 });
 
 var io = socket(server);
